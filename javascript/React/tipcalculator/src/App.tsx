@@ -10,6 +10,8 @@ function App() {
     console.log(str);
   };
 
+  // https://blog.devgenius.io/how-to-pass-data-from-child-to-parent-in-react-33ed99a90f43
+
   return (
     <div className="text-center">
       <h1 className="text-3xl pt-4">Tip Calculator</h1>
