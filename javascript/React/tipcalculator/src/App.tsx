@@ -6,10 +6,14 @@ import { UserInput } from "./components/UserInput";
 import "./App.css";
 
 function App() {
+  const callData = (str: string): void => {
+    console.log(str);
+  };
+
   return (
     <div className="text-center">
       <h1 className="text-3xl pt-4">Tip Calculator</h1>
-      <UserInput />
+      <UserInput callData={callData} />
       <TipSlider />
       {/* <Total /> */}
     </div>

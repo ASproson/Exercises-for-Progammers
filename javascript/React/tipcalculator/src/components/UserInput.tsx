@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-export const UserInput = () => {
+export const UserInput = ({ callData }: any) => {
   const [bill, setBill] = useState<number>();
 
   const handleBillInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBill(Number(e.target.value));
   };
+
+  callData("Passed through");
 
   return (
     <div>
