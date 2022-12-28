@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [rangeValue, setRangeValue] = useState(15);
+  const [billSlider, setBillSlider] = useState(15);
   const [bill, setBill] = useState<number>(0);
   const [total, setTotal] = useState<number>(0);
 
@@ -16,8 +16,8 @@ function App() {
   };
 
   useEffect(() => {
-    setTotal(tipCalculator(bill, rangeValue));
-  }, [rangeValue, bill]);
+    setTotal(tipCalculator(bill, billSlider));
+  }, [billSlider, bill]);
 
   return (
     <div className="text-center pt-[100px]">
@@ -38,10 +38,10 @@ function App() {
           type="range"
           min={5}
           max={20}
-          value={rangeValue}
-          onChange={(e) => setRangeValue(Number(e.target.value))}
+          value={billSlider}
+          onChange={(e) => setBillSlider(Number(e.target.value))}
         />
-        <p className="text-lg font-bold">{rangeValue}</p>
+        <p className="text-lg font-bold">{billSlider}</p>
       </div>
       <div className="pt-8">
         <h2 className="font-bold text-xl pb-2">Total:</h2>
